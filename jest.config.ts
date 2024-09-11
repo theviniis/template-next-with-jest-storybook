@@ -10,8 +10,18 @@ const createJestConfig = nextJest({
 const config: Config = {
   coverageProvider: 'v8',
   testEnvironment: 'jsdom',
-  // Add more setup options before each test is run
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  collectCoverage: false,
+  collectCoverageFrom: [
+    'src/**/*.ts(x)?',
+    '!src/app/**',
+    '!src/lib/registry.tsx',
+    '!src/types/**',
+    '!src/**/stories.tsx',
+    '!src/styles/**',
+  ],
+  modulePaths: ['<rootDir>/src/'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
