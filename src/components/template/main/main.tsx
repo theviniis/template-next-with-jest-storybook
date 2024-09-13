@@ -1,5 +1,5 @@
 import { Description, Logo, Title, Wrapper } from '@/components'
-import { Illustration } from '@/components/atoms/illustration'
+import { Illustration } from '@/components/atom/illustration'
 
 export interface MainProps {
   title: string

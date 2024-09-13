@@ -1,0 +1,12 @@
+import { render, screen } from '@testing-library/react'
+import { {{pascalCase name}} } from './{{lowerCase name}}'
+
+const testId = '{{lowerCase name}}-test-id'
+
+describe('<{{pascalCase name}} />', () => {
+  it('should render {{pascalCase name}}', () => {
+    render(<{{pascalCase name}} data-testid={testId} />)
+    const element = screen.getByTestId(testId)
+    expect(element).toBeInTheDocument()
+  })
+})

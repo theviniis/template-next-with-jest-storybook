@@ -1,2 +1,1 @@
-export * from './atoms'
-export * from './typography'
+export * from './atom'
